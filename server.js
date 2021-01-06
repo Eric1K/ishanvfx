@@ -1,0 +1,33 @@
+
+const express = require("express");
+const app = express();
+const ytdl = require("ytdl-core");
+
+
+
+app.use(express.static("public"));
+
+// https://expressjs.com/en/starter/basic-routing.html
+app.get("/", (request, response) => {
+  response.sendFile(__dirname + "/pages/index.html");
+});
+
+app.get("/work", (request, response) => {
+  response.sendFile(__dirname + "/pages/work.html");
+});
+
+app.get("/work", (request, response) => {
+  response.sendFile(__dirname + "/pages/work.html");
+});
+
+app.get("/clients", (request, response) => {
+  response.sendFile(__dirname + "/pages/clients.html");
+});
+
+app.get("/clients", (request, response) => {
+  response.sendFile(__dirname + "/pages/clients.html");
+});
+
+const listener = app.listen(process.env.PORT, () => {
+  console.log("Your app is listening on port " + listener.address().port);
+});
