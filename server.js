@@ -33,6 +33,14 @@ app.get("/clients.html", (request, response) => {
   response.sendFile(__dirname + "/pages/clients.html");
 });
 
+app.get("/contact", (request, response) => {
+  response.sendFile(__dirname + "/pages/contact.html");
+});
+
+app.get("/contact.html", (request, response) => {
+  response.sendFile(__dirname + "/pages/contact.html");
+});
+
 const listener = app.listen(process.env.PORT, () => {
   console.log("Your app is listening on port " + listener.address().port);
 });
